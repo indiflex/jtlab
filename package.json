@@ -2,11 +2,18 @@
   "name": "jtlab",
   "version": "0.0.2",
   "description": "JS/TS Laboratory",
-  "main": "index.js",
+  "main": "dist/index.js",
   "type": "module",
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./src/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
   },
   "repository": {
     "type": "git",
