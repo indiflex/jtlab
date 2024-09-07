@@ -13,17 +13,15 @@ export function isEndJaum(str: string) {
   );
 }
 
-// const josa = (str, ja_mo) => {
-//   const [ja, mo] = ja_mo.split('/');
-//   return isEndJaum(str) ? ja : mo;
-// };
+const josa = (str: string, ja_mo: string) => {
+  const [ja, mo] = ja_mo.split('/');
+  return isEndJaum(str) ? ja : mo;
+};
 
-// const iga = str => josa(str, '이/가');
-// const eunun = str => josa(str, '은/는');
-// const eulul = str => josa(str, '을/를');
-// const eyuya = str => josa(str, '이어야/여야');
-// const rang = str => josa(str, '이랑/랑');
+const iga = (str: string) => josa(str, '이/가');
+const eunun = (str: string) => josa(str, '은/는');
+const eulul = (str: string) => josa(str, '을/를');
+const eyuya = (str: string) => josa(str, '이어야/여야');
+const rang = (str: string) => josa(str, '이랑/랑');
 
-
-
-// export { iga, josa, eunun, eulul, eyuya, rang };
+export { josa, iga, eunun, eulul, eyuya, rang };

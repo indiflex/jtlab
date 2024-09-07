@@ -1,4 +1,5 @@
 import assert from 'assert';
+import { iga, eunun, eulul, eyuya } from '../src/libs/hangul';
 
 function testing() {
   assert.strictEqual(`고성군${iga('고성군')}`, '고성군이');
@@ -11,4 +12,4 @@ function testing() {
   assert.strictEqual(`고성군${eyuya('고성군')}`, '고성군이어야');
   assert.strictEqual(`성동구${eyuya('성동구')}`, '성동구여야');
 }
-// testing();
+testing();
