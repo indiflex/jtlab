@@ -1,0 +1,29 @@
+{
+  "name": "jtlab",
+  "version": "0.0.2",
+  "description": "JS/TS Laboratory",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/indiflex/jtlab.git"
+  },
+  "keywords": [
+    "javascript",
+    "typescript",
+    "JS",
+    "TS",
+    "react",
+    "next"
+  ],
+  "author": "Indiflex Developers",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.5.4",
+    "typescript": "^5.5.4"
+  }
+}
