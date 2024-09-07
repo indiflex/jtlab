@@ -13,7 +13,7 @@ export function isEndJaum(str: string) {
   );
 }
 
-const josa = (str: string, ja_mo: string) => {
+export const josa = (str: string, ja_mo: string) => {
   const [ja, mo] = ja_mo.split('/');
   return isEndJaum(str) ? ja : mo;
 };
@@ -24,4 +24,4 @@ const eulul = (str: string) => josa(str, '을/를');
 const eyuya = (str: string) => josa(str, '이어야/여야');
 const rang = (str: string) => josa(str, '이랑/랑');
 
-export { josa, iga, eunun, eulul, eyuya, rang };
+export { iga, eunun, eulul, eyuya, rang };
