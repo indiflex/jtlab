@@ -1,8 +1,9 @@
 {
   "name": "jtlab",
-  "version": "0.0.11",
+  "version": "0.0.10",
   "description": "JS/TS Laboratory",
   "main": "./dist/index.js",
+  "type": "module",
   "scripts": {
     "build": "pnpm clean && pnpm build:tsc && pnpm build:js && pnpm test",
     "build:tsc": "tsc",
