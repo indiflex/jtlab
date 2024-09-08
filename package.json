@@ -1,6 +1,6 @@
 {
   "name": "jtlab",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "JS/TS Laboratory",
   "main": "./dist/index.js",
   "type": "module",
