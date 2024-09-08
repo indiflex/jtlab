@@ -4,7 +4,7 @@
   "description": "JS/TS Laboratory",
   "main": "./dist/index.js",
   "scripts": {
-    "build": "pnpm clean && pnpm build:tsc && pnpm build:js",
+    "build": "pnpm clean && pnpm build:tsc && pnpm build:js && pnpm test",
     "build:tsc": "tsc",
     "build:js": "node build.js",
     "clean": "rm -rf dist",
@@ -14,7 +14,6 @@
     "dist",
     "src"
   ],
-  "type": "module",
   "exports": {
     "types": "./dist/index.d.ts",
     "import": "./dist/index.js",
@@ -36,7 +35,10 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^22.5.4",
+    "@typescript-eslint/eslint-plugin": "^8.4.0",
+    "@typescript-eslint/parser": "^8.4.0",
     "esbuild": "^0.23.1",
+    "eslint": "^9.10.0",
     "typescript": "^5.5.4"
   }
 }
