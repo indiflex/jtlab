@@ -2,7 +2,7 @@ const ㄱ = 'ㄱ'.charCodeAt(0);
 const ㅎ = 'ㅎ'.charCodeAt(0);
 const 가 = '가'.charCodeAt(0);
 const 힣 = '힣'.charCodeAt(0);
-const 자음알파벳숫자 = [...'LMNRlmnr136780'].map(a => a.charCodeAt(0));
+const 자음알파벳숫자 = [...'LMNRlmnr136780'].map((a) => a.charCodeAt(0));
 
 export function isEndJaum(str: string) {
   const s = str.charCodeAt(str.length - 1);

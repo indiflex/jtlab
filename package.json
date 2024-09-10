@@ -5,11 +5,14 @@
   "main": "./dist/index.js",
   "type": "module",
   "scripts": {
-    "build": "pnpm clean && pnpm build:tsc && pnpm build:js && pnpm test",
+    "build": "pnpm clean && pnpm build:tsc && pnpm build:js",
     "build:tsc": "tsc",
     "build:js": "node build.js",
     "clean": "rm -rf dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:w": "jest --watch",
+    "test:org": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node --no-warnings=ExperimentalWarning --loader ts-node/esm src/index.ts"
   },
   "files": [
     "dist",
@@ -35,11 +38,23 @@
   "author": "Indiflex Developers",
   "license": "MIT",
   "devDependencies": {
+    "@babel/preset-typescript": "^7.24.7",
+    "@jest/globals": "^29.7.0",
+    "@types/jest": "^29.5.12",
     "@types/node": "^22.5.4",
     "@typescript-eslint/eslint-plugin": "^8.4.0",
     "@typescript-eslint/parser": "^8.4.0",
     "esbuild": "^0.23.1",
     "eslint": "^9.10.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.30.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.4",
+    "prettier": "^3.3.3",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
   }
 }
