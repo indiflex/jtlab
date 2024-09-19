@@ -21,9 +21,9 @@ $> pnpm i -D eslint-config-airbnb-base eslint-plugin-import
 $> pnpm i -D prettier eslint-config-prettier eslint-plugin-prettier
 ```
 
-1. esbuild
+2. esbuild
 
-1. Jest test framework
+3. Jest test framework
 
 ```
 $> pnpm i -D jest @types/jest ts-jest

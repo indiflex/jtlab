@@ -8,8 +8,8 @@ describe('promises', () => {
       randTime(2),
       randTime(3),
     ]);
-    console.table(arrAll);
-    console.table(arrAsync);
+    // console.table(arrAll);
+    // console.table(arrAsync);
     expect(arrAll).toStrictEqual([1, 2, 3]);
     expect(arrAsync).toStrictEqual([1, 2, 3]);
   });
