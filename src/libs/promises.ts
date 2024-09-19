@@ -11,18 +11,12 @@ type Settled<T> =
 export const randTime = <T>(val: T): Promise<T> =>
   new Promise((resolve) => {
     const rtime = Math.random() * 1000;
-    console.log('start>>', val, Math.trunc(rtime));
+    // console.log('start>>', val, Math.trunc(rtime));
     setTimeout(() => {
       // console.log('run>>', val);
       resolve(val);
     }, rtime);
   });
-
-// export const promiseAllSettled = <T>(promises: Promise<Settled<T>>[]) => {
-//   const results: Promise<Settled<T>>[] = [];
-
-//   return results;
-// };
 
 export function promiseAllSettled<T>(promises: Promise<T>[]) {
   // const results: Promise<Settled<T>>[] = [];

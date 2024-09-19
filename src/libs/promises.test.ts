@@ -26,7 +26,7 @@ describe('promises', () => {
     //   randTime(3),
     // ]);
     // console.table(arrNew);
-    console.log(JSON.stringify(arrOrg));
+    // console.log(JSON.stringify(arrOrg));
     // expect(arrOrg).toStrictEqual(arrNew);
   });
   test('promise-allSettled-with-rejected', async () => {
@@ -41,7 +41,7 @@ describe('promises', () => {
     //   randTime(3),
     // ]);
     // console.table(arrNew);
-    console.log(JSON.stringify(arrOrg));
+    // console.log(JSON.stringify(arrOrg));
     // expect(arrOrg).toStrictEqual(arrNew);
   });
 });
