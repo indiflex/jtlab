@@ -1,5 +1,3 @@
-import assert from 'assert';
-
 type Settled<T> =
   | {
       status: 'fulfilled';
@@ -20,15 +18,25 @@ export const randTime = <T>(val: T): Promise<T> =>
     }, rtime);
   });
 
-export const promiseAllSettled = <T>(promises: Promise<Settled<T>>[]) => {
-  const results: Promise<Settled<T>>[] = [];
+// export const promiseAllSettled = <T>(promises: Promise<Settled<T>>[]) => {
+//   const results: Promise<Settled<T>>[] = [];
 
-  return results;
-};
-assert.deepStrictEqual(
-  await Promise.allSettled([randTime(1), randTime(2), randTime(3)]),
-  await Promise.allSettled([randTime(1), randTime(2), randTime(3)])
-);
+//   return results;
+// };
+
+export function promiseAllSettled<T>(promises: Promise<T>[]) {
+  // const results: Promise<Settled<T>>[] = [];
+  // return Promise.all(
+  return promiseAll(
+    promises.map((promise) =>
+      promise
+        .then((value) => ({ status: 'fulfilled', value }))
+        .catch((reason) => ({ status: 'rejected', reason }))
+    )
+  );
+
+  // return results;
+}
 
 export const promiseAll = <T>(promises: Promise<T>[]): Promise<T[]> =>
   new Promise((resolve, reject) => {
